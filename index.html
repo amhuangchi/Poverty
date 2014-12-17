@@ -15,6 +15,29 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script type="text/javascript">
+if(document.images)
+{
+  var image_array = new Array();
+	
+  // path to the directory with images
+  var path = 'images/';
+  // enumeration of the "active" images
+  image_array[0] = path + "image1.gif";
+  image_array[1] = path + "image2.gif";
+  var preload_image = new Array ();
+ 
+  for(var i=0; i<image_array.length; i++)
+  {
+    preload_image[i]= new Image();
+    preload_image[i].src = image_array[i];
+  }
+}
+function rollover(name, filename)
+{
+  document.images[name].src = filename;
+}
+</script>
 
   </head>
   <body>
@@ -43,7 +66,9 @@
 <a id="Poverty" class="anchor" href="#Poverty" aria-hidden="true"><span class="octicon octicon-link"></span></a>Poverty.</h3>
 
 
-<img src="http://i.huffpost.com/gen/1377460/thumbs/o-POVERTY-facebook.jpg">
+<a href="http://i.huffpost.com/gen/1377460/thumbs/o-POVERTY-facebook.jpg" rel="lightbox" onmouseover="rollover('button1','http://images4.alphacoders.com/168/168636.jpg')" onmouseout="rollover('button1','http://i.huffpost.com/gen/1377460/thumbs/o-POVERTY-facebook.jpg')">
+<img name="button1" src="http://i.huffpost.com/gen/1377460/thumbs/o-POVERTY-facebook.jpg"></a>
+<img name="button1" src="http://i.huffpost.com/gen/1377460/thumbs/o-POVERTY-facebook.jpg">
 
 <h3>
 <a id="What is Poverty?" class="anchor" href="#What is Poverty?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Poverty?</h3>
